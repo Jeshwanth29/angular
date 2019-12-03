@@ -1,0 +1,128 @@
+ <!--Main Navigation-->
+    <header>
+<!--Navbar--><br><br>
+    <nav class="navbar navbar-expand-lg navbar-lightblue bg-light fixed-top">
+
+      <div class="container">
+ <a class="navbar-brand" href="#">
+    <img src="assets/image/logo.png" width="200" height="50" alt="">
+  </a>
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="admindashboard">Home</a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="login">Logout
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Collapsible content -->
+      </div>
+    </nav>
+    <!--/.Navbar-->
+    </header>
+    <!--Main Navigation-->
+
+<div class="container">
+    
+    <br><br>
+      <ag-grid-angular 
+    style="width: 600px; height: 400px;" 
+    class="ag-theme-balham"
+    [rowData]="rowData | async"
+    [columnDefs]="columnDefs"
+    [modules]="modules"
+    rowselection = "single"
+    (gridReady) = "onGridReady($event)"
+    >
+</ag-grid-angular>
+   
+</div>
+<br><br>
+
+<div>
+  <button (click)="onTestGet()">GET Agent Details</button>
+</div>
+<div>
+  <ol>
+    <li *ngFor='let user of getData'>{{user.agent_id}}<b>||</b>{{user.name}}<b>||</b></li>
+  </ol>
+</div>
+<BR>
+
+<div class="container">
+  <button type="submit" class="btn btn-info" (click)="onRemoveSelected()">Delete</button>
+  
+</div>
+
+
+<!--<div class="container">
+   <form ngForm>
+   
+
+      <button type="submit" class="btn btn-info" (click)="createagent()"style="color:black;font-weight: bold;font-family: Times New Roman;">Submit</button>&nbsp;
+    <button type="submit" class="btn btn-info" (click)="onRemoveSelected()"style="color:black;font-weight: bold;font-family: Times New Roman;">Delete</button>&nbsp;
+    <button type="submit" class="btn btn-info" (click)="updateSelected()"style="color:black;font-weight: bold;font-family: Times New Roman;">Edit</button>&nbsp;
+    <button type="submit" class="btn btn-info" (click)="updRow()"style="color:black;font-weight: bold;font-family: Times New Roman;">Update</button>&nbsp;
+
+<br>
+<br>
+<div class="form-group">
+    <label for="agent_id"style="color:black;font-weight: bold;font-family: Times New Roman;">Agent_ID</label>
+    <input type="text" class="form-control" id="agent_id"
+           required
+           [(ngModel)]="model.agent_id" name="agent_id">
+  </div>
+
+  <div class="form-group">
+    <label for="name"style="color:black;font-weight: bold;font-family: Times New Roman;">Name</label>
+    <input type="text" class="form-control" id="name"
+           required
+           [(ngModel)]="model.name" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="DOB"style="color:black;font-weight: bold;font-family: Times New Roman;">Date of Birth</label>
+    <input type="text"  class="form-control" id="DOB" required
+           [(ngModel)]="model.DOB" name="DOB">
+  </div>
+  <div class="form-group">
+   <label for="phone_no"style="color:black;font-weight: bold;font-family: Times New Roman;">Contact Number</label>
+    <input type="number" class="form-control" id="phone_no"
+           required
+           [(ngModel)]="model.phone_no" name="phone_no">
+  </div>
+  <div class="form-group">
+   <label for="username"style="color:black;font-weight: bold;font-family: Times New Roman;">Username</label>
+    <input type="text" class="form-control" id="username"
+           required
+           [(ngModel)]="model.username" name="username">
+  </div>
+  <div class="form-group">
+   <label for="password"style="color:black;font-weight: bold;font-family: Times New Roman;">Password</label>
+    <input type="text" class="form-control" id="password"
+           required
+           [(ngModel)]="model.password" name="password">
+</div>
+<div class="form-group">
+    <label for="branch_id"style="color:black;font-weight: bold;font-family: Times New Roman;">Branch_ID</label>
+    <input type="text" class="form-control" id="branch_id"
+           required
+           [(ngModel)]="model.branch_id" name="branch_id">
+  </div>
+    
+  </form>
+</div> -->
+
