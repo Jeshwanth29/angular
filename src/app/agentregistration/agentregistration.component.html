@@ -9,7 +9,7 @@
     <img src="assets/image/logo.png" width="200" height="50">
   </a>
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="admindashboard">Home</a>
+        
 
         <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -26,6 +26,7 @@
               <a class="nav-link" href="login">Logout
              
               </a>
+              <a class="navbar-brand" href="admindashboard">Home</a>
             </li>
           </ul>
           <!-- Links -->
@@ -143,6 +144,7 @@
     </div>
   </div>
  
+    <div class="form-group row d-flex justify-content-center">
     <div class="col-md-4 ">
       <label for="validationCustom01">Name</label>
      <input type="text"  class="form-control" id="name"
@@ -151,6 +153,8 @@
         Welcome
       </div>
     </div>
+  </div>
+  <div class="form-group row d-flex justify-content-center">
     <div class="col-md-4 ">
       <label for="validationCustom02">DOB</label>
       <input type="Date" class="form-control" id="DOB"
@@ -160,6 +164,8 @@
       
       </div>
     </div>
+  </div>
+  <div class="form-group row d-flex justify-content-center">
    <div class="col-md-4 ">
       <label for="validationCustom02">Phone Number</label>
      <input type="number" class="form-control" id="phone_no"
@@ -168,9 +174,10 @@
       <div class="valid-feedback">
       </div>
     </div>
+  </div>
 
 
-
+<div class="form-group row d-flex justify-content-center">
 <div class="col-md-4">
       <label for="validationCustomUsername">Username</label>
       <div class="input-group">
@@ -183,7 +190,9 @@
         </div>
       </div>
     </div>
- 
+  </div>
+
+ <div class="form-group row d-flex justify-content-center">
     <div class="col-md-4">
       <label for="validationCustom03">Password</label>
   <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control" id="password" required [(ngModel)]="model.password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"name="password">
@@ -191,7 +200,9 @@
         Please provide a valid password.
       </div>
     </div>
+  </div>
     
+    <div class="form-group row d-flex justify-content-center">
     <div class="col-md-4">
       <label for="validationCustom04">Branch ID</label>
        <input type="number" class="form-control" id="branch_id"
@@ -200,6 +211,9 @@
       <div class="invalid-feedback">
       </div>
 </div> 
+</div>
+
+<div class="form-group row d-flex justify-content-center">
   <div class="form-group">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -211,7 +225,10 @@
       </div>
     </div>
   </div>
+</div>
+<div class="col-xs-4 text-center">
   <button class="btn btn-primary" type="submit" (click)="createAgent()">Submit form</button>
+</div>
 </form> 
 
 

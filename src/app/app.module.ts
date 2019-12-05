@@ -17,6 +17,8 @@ import { AgentserviceService } from './agent/agentservice.service';
 import { CustomerserviceService } from './customer/customerservice.service';
 import { AgentregistrationserviceService } from './agentregistration/agentregistrationservice.service';
 import { LoginserviceService } from './login/loginservice.service';
+import { AdminupdatecomponentComponent } from './adminupdatecomponent/adminupdatecomponent.component';
+import { AdminupdateserviceService } from './adminupdatecomponent/adminupdateservice.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +28,7 @@ import { LoginserviceService } from './login/loginservice.service';
     CustomerComponent,
     AgentComponent,
     AgentregistrationComponent,
+    AdminupdatecomponentComponent,
     
 
    // NewregistrationComponent
