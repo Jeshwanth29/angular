@@ -13,6 +13,6 @@ export class AgentregistrationserviceService {
 
   createAgent(agent:Object):Observable<Object>{
   	console.log(agent);
-  	return this.http.post<Agent>('http://localhost:8082/post/Agent',agent);
+  	return this.http.post<Agent>('http://localhost:8042/myproj/post/Agent',agent);
   }
 }

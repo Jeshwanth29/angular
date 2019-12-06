@@ -10,6 +10,6 @@ export class CustomerserviceService {
   
   getUserDetails(){
   	return this.http.get
-  	('http://localhost:8082/Customer');
+  	('http://localhost:8042/myproj/Customer');
   }
 }

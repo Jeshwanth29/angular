@@ -47,7 +47,7 @@ export class CustomerComponent implements OnInit {
 
     constructor(private router:Router,private _httpService:CustomerserviceService,private http: HttpClient) {}
        ngOnInit() {
-                this.rowData = this.http.get('http://localhost:8082/Customer');
+                this.rowData = this.http.get('http://localhost:8042/myproj/Customer');
 
     }
 

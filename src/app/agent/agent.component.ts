@@ -47,7 +47,7 @@ export class AgentComponent implements OnInit {
     
 
     ngOnInit() {
-        this.rowData = this.http.get('http://localhost:8082/Agent');
+        this.rowData = this.http.get('http://localhost:8042/myproj/Agent');
     }
 
     modules = AllCommunityModules;

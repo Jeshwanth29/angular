@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     this._httpService.getAdminDetails(user,password)
     .subscribe((res:boolean)=>{
         this.getData=res;
-        console.log("fkag "+this.getData);
+        console.log("flag "+this.getData);
       });
     if(this.getData==true){
       console.log("inside if");

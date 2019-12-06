@@ -37,20 +37,20 @@
     <!--/.Navbar-->
 
 
- <div style="text-align:center">
-  <img width="500" alt="Company Logo" src="assets/image/logo.png">
-</div>
+   <div style="text-align:center">
+     <img width="500" alt="Company Logo" src="assets/image/logo.png">
+   </div>
 <br>
 <br>
 
-<!-- <form ngForm>
+<form ngForm>
 
 <div class="form-group row d-flex justify-content-center">
 	<div class="class=col-xs-2">
-  <label for="name">Agent_Id</label>
-  <input type="number" class="form-control" id="agent_id"
+  <label for="name">Employee Id</label>
+  <input type="number" class="form-control" id="empId"
          required
-         [(ngModel)]="model.agent_id" name="agent_id" #name='ngModel'placeholder="Enter a Agent_Id">
+         [(ngModel)]="model.empId" name="empId" #name='ngModel'placeholder="Enter a empId">
 </div>
 </div>
 
@@ -69,74 +69,67 @@
          required
          [(ngModel)]="model.DOB" name="DOB" #name='ngModel' placeholder="Enter a Date of Birth">
 
-      <div class="valid-feedback">
+      
 </div>
 </div>
 
-<div class="form-group row d-flex justify-content-center">
-	<div class="class=col-xs-2">
-  <label for="contact">Phone_No</label>
-  <input type="number" class="form-control" id="phone_no"
+  <div class="form-group row d-flex justify-content-center">
+	 <div class="class=col-xs-2">
+      <label for="contact">Phone Number</label>
+      <input type="number" class="form-control" id="phone_num"
          required
-         [(ngModel)]="model.phone_no" name="phone_no" #name='ngModel' placeholder="Enter a Phone_No">
-</div>
-</div>
+         [(ngModel)]="model.phone_num" name="phone_num" #name='ngModel' placeholder="Enter a phone_num">
+    </div>
+  </div>
 
-<div class="form-group row d-flex justify-content-center">
-	<div class="class=col-xs-2">
-  <label for="username">UserName</label>
-  <input type="text" class="form-control" id="username"
+  <div class="form-group row d-flex justify-content-center">
+	 <div class="class=col-xs-2">
+      <label for="username">UserName</label>
+      <input type="text" class="form-control" id="username"
          required
          [(ngModel)]="model.username" name="username" #name='ngModel'placeholder="Enter a UserName">
-</div>
-</div>
+    </div>
+  </div>
 
-<div class="form-group row d-flex justify-content-center">
-	<div class="class=col-xs-2">
-  <label for="password">Password</label>
-  <input type="password" class="form-control" id="password"
+  <div class="form-group row d-flex justify-content-center">
+	  <div class="class=col-xs-2">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password"
          required
          [(ngModel)]="model.password" name="password" #name='ngModel' placeholder="Enter a Password">
-</div>
-</div>
+    </div>
+  </div>
 
 
 
-<div class="form-group row d-flex justify-content-center">
-  <div class="class=col-xs-2">
-  <label for="branch_id">Branch_Id</label>
-  <input type="number" class="form-control" id="branch_id"
+  <div class="form-group row d-flex justify-content-center">
+    <div class="class=col-xs-2">
+      <label for="role">Role</label>
+      <input type="String" class="form-control" id="role"
          required
-         [(ngModel)]="model.branch_id" name="branch_id" #name='ngModel' placeholder="Enter a branch">
-</div>
-</div>
-
+         [(ngModel)]="model.role" name="role" #name='ngModel' placeholder="Enter role">
+    </div>
+  </div>
 
 
 <div class="col-xs-4 text-center">
-
-  <button type="submit" class="btn btn-success" (click)="createAgent()">Submit</button>
-
-
-  
+  <button type="submit" class="btn btn-success" (click)="update()">Submit</button> 
 </div>
-
-<br>
-
-<br>
-
-</form>  -->
+<br><br>
+ 
+ <form>
 
 
-<form ngForm class="needs-validation" novalidate>
+
+<!-- <form ngForm class="needs-validation" novalidate>
 
 
 <div class="form-group row d-flex justify-content-center">
   <div class="col-md-4 ">
-      <label for="validationCustom01">Agent ID</label>
-     <input type="number" class="form-control" id="agent_id"
+      <label for="validationCustom01">Employee ID</label>
+     <input type="number" class="form-control" id="empId"
          required
-         [(ngModel)]="model.agent_id" name="agent_id" #name='ngModel'placeholder="Enter a Agent_Id">
+         [(ngModel)]="model.empId" name="empId" #name='ngModel'placeholder="Enter Employee ID">
 
       <div class="valid-feedback">
         
@@ -168,9 +161,9 @@
   <div class="form-group row d-flex justify-content-center">
    <div class="col-md-4 ">
       <label for="validationCustom02">Phone Number</label>
-     <input type="number" class="form-control" id="phone_no"
+     <input type="number" class="form-control" id="phone_num"
          required
-         [(ngModel)]="model.phone_no" name="phone_no" #name='ngModel' placeholder="Enter a Phone_No">
+         [(ngModel)]="model.phone_num" name="phone_num" #name='ngModel' placeholder="Enter PhoneNo">
       <div class="valid-feedback">
       </div>
     </div>
@@ -194,8 +187,8 @@
 
  <div class="form-group row d-flex justify-content-center">
     <div class="col-md-4">
-      <label for="validationCustom03">Password</label>
-  <input type="password"  class="form-control" id="password" required [(ngModel)]="model.password" name="password">
+      <label for="validationCustom03" >Password</label>
+  <input type="password" class="form-control" id="password" required [(ngModel)]="model.password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"name="password">
       <div class="invalid-feedback">
         Please provide a valid password.
       </div>
@@ -204,16 +197,16 @@
     
     <div class="form-group row d-flex justify-content-center">
     <div class="col-md-4">
-      <label for="validationCustom04">Branch ID</label>
-       <input type="number" class="form-control" id="branch_id"
+      <label for="validationCustom04">Role</label>
+       <input type="text" class="form-control" id="role"
          required
-         [(ngModel)]="model.branch_id" name="branch_id" #name='ngModel' placeholder="Enter a branch">
+         [(ngModel)]="model.role" name="role" #name='ngModel' placeholder="Enter Role">
       <div class="invalid-feedback">
       </div>
 </div> 
 </div>
 
-<!-- <div class="form-group row d-flex justify-content-center">
+<div class="form-group row d-flex justify-content-center">
   <div class="form-group">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -225,10 +218,9 @@
       </div>
     </div>
   </div>
-</div> -->
-<div class="col-xs-4 text-center">
-  <button class="btn btn-primary" type="submit" (click)="createAgent()">Submit form</button>
 </div>
-</form> 
+<div class="col-xs-4 text-center">
+  <button class="btn btn-primary" type="submit" (click)="update()">Submit form</button>
+</div>-->
 
 

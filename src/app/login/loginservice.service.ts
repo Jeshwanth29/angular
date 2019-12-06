@@ -19,7 +19,7 @@ export class LoginserviceService {
   	console.log(username);
   	console.log(password);
   	return this.http.get
-  	('http://localhost:8082/Admin/'+username+'/'+password);
+  	('http://localhost:8042/myproj/Admin/'+username+'/'+password);
 
   }
 }

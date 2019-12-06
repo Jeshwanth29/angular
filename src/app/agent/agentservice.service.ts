@@ -10,13 +10,13 @@ export class AgentserviceService {
   
   getUserDetails(){
   	return this.http.get
-  	('http://localhost:8082/Agent');
+  	('http://localhost:8042/myproj/Agent');
 
   }
 
   delAgent(agent_id){
   	console.log(agent_id);
-  	return this.http.delete('http://localhost:8082/delete/Agent/'+agent_id,agent_id);
+  	return this.http.delete('http://localhost:8042/myproj/delete/Agent/'+agent_id,agent_id);
   }
 
 
