@@ -1,14 +1,14 @@
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { AdmindashboardComponent} from './admindashboard/admindashboard.component';
-import{LogoutComponent} from './logout/logout.component';
-import{CustomerComponent} from './customer/customer.component';
-import{ AgentComponent } from './agent/agent.component';
-import{AgentregistrationComponent} from './agentregistration/agentregistration.component';
+import { LoginComponent } from './b_login/login.component';
+import { AdmindashboardComponent} from './b_admindashboard/admindashboard.component';
+import{LogoutComponent} from './b_logout/logout.component';
+import{CustomerComponent} from './b_customer/customer.component';
+import{ AgentComponent } from './b_agent/agent.component';
+import{AgentregistrationComponent} from './b_agentregistration/agentregistration.component';
 /*import { NewregistrationComponent } from './newregistration/newregistration.component';*/
-import { AdminupdatecomponentComponent } from './adminupdatecomponent/adminupdatecomponent.component'
+import { AdminupdatecomponentComponent } from './b_adminupdatecomponent/adminupdatecomponent.component'
 
 const routes: Routes = [
  { path:'',redirectTo:'login',pathMatch:'full'},

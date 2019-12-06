@@ -1,0 +1,234 @@
+
+
+
+
+<!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-lightblue bg-light fixed-top">
+      <div class="container">
+ <a class="navbar-brand" href="#">
+    <img src="assets/image/logo.png" width="200" height="50">
+  </a>
+        <!-- Navbar brand -->
+        
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="login">Logout
+             
+              </a>
+              <a class="navbar-brand" href="admindashboard">Home</a>
+            </li>
+          </ul>
+          <!-- Links -->
+        </div>
+        <!-- Collapsible content -->
+      </div>
+    </nav><br><br><br>
+    <!--/.Navbar-->
+
+
+ <div style="text-align:center">
+  <img width="500" alt="Company Logo" src="assets/image/logo.png">
+</div>
+<br>
+<br>
+
+<!-- <form ngForm>
+
+<div class="form-group row d-flex justify-content-center">
+	<div class="class=col-xs-2">
+  <label for="name">Agent_Id</label>
+  <input type="number" class="form-control" id="agent_id"
+         required
+         [(ngModel)]="model.agent_id" name="agent_id" #name='ngModel'placeholder="Enter a Agent_Id">
+</div>
+</div>
+
+<div class="form-group row d-flex justify-content-center">
+	<div class="class=col-xs col-xs-offset-4 ">
+  <label for="address">Name</label>
+  <input type="text"  class="form-control" id="name"
+         [(ngModel)]="model.name" name="name" placeholder="Enter a Name">
+</div>
+</div>
+
+<div class="form-group row d-flex justify-content-center">
+	<div class="class=col-xs-2">
+  <label for="DOB">Date of Birth</label>
+  <input type="Date" class="form-control" id="DOB"
+         required
+         [(ngModel)]="model.DOB" name="DOB" #name='ngModel' placeholder="Enter a Date of Birth">
+
+      <div class="valid-feedback">
+</div>
+</div>
+
+<div class="form-group row d-flex justify-content-center">
+	<div class="class=col-xs-2">
+  <label for="contact">Phone_No</label>
+  <input type="number" class="form-control" id="phone_no"
+         required
+         [(ngModel)]="model.phone_no" name="phone_no" #name='ngModel' placeholder="Enter a Phone_No">
+</div>
+</div>
+
+<div class="form-group row d-flex justify-content-center">
+	<div class="class=col-xs-2">
+  <label for="username">UserName</label>
+  <input type="text" class="form-control" id="username"
+         required
+         [(ngModel)]="model.username" name="username" #name='ngModel'placeholder="Enter a UserName">
+</div>
+</div>
+
+<div class="form-group row d-flex justify-content-center">
+	<div class="class=col-xs-2">
+  <label for="password">Password</label>
+  <input type="password" class="form-control" id="password"
+         required
+         [(ngModel)]="model.password" name="password" #name='ngModel' placeholder="Enter a Password">
+</div>
+</div>
+
+
+
+<div class="form-group row d-flex justify-content-center">
+  <div class="class=col-xs-2">
+  <label for="branch_id">Branch_Id</label>
+  <input type="number" class="form-control" id="branch_id"
+         required
+         [(ngModel)]="model.branch_id" name="branch_id" #name='ngModel' placeholder="Enter a branch">
+</div>
+</div>
+
+
+
+<div class="col-xs-4 text-center">
+
+  <button type="submit" class="btn btn-success" (click)="createAgent()">Submit</button>
+
+
+  
+</div>
+
+<br>
+
+<br>
+
+</form>  -->
+
+
+<form ngForm class="needs-validation" novalidate>
+
+
+<div class="form-group row d-flex justify-content-center">
+  <div class="col-md-4 ">
+      <label for="validationCustom01">Agent ID</label>
+     <input type="number" class="form-control" id="agent_id"
+         required
+         [(ngModel)]="model.agent_id" name="agent_id" #name='ngModel' placeholder="Enter a Agent_Id">
+
+      <div class="valid-feedback">
+        
+      </div>
+    </div>
+  </div>
+ 
+    <div class="form-group row d-flex justify-content-center">
+    <div class="col-md-4 ">
+      <label for="validationCustom01">Name</label>
+     <input type="text"  class="form-control" id="name"
+         [(ngModel)]="model.name" name="name" placeholder="Enter a Name">
+      <div class="valid-feedback">
+        Welcome
+      </div>
+    </div>
+  </div>
+  <div class="form-group row d-flex justify-content-center">
+    <div class="col-md-4 ">
+      <label for="validationCustom02">DOB</label>
+      <input type="Date" class="form-control" id="DOB"
+         required
+         [(ngModel)]="model.DOB" name="DOB" #name='ngModel' placeholder="Enter a Date of Birth">
+      <div class="valid-feedback">
+      
+      </div>
+    </div>
+  </div>
+  <div class="form-group row d-flex justify-content-center">
+   <div class="col-md-4 ">
+      <label for="validationCustom02">Phone Number</label>
+     <input type="number" class="form-control" id="phone_no"
+         required
+         [(ngModel)]="model.phone_no" name="phone_no" #name='ngModel' placeholder="Enter a Phone_No">
+      <div class="valid-feedback">
+      </div>
+    </div>
+  </div>
+
+
+<div class="form-group row d-flex justify-content-center">
+<div class="col-md-4">
+      <label for="validationCustomUsername">Username</label>
+      <div class="input-group">
+        
+        <input type="text" class="form-control" id="username"
+         required
+         [(ngModel)]="model.username" name="username" #name='ngModel'placeholder="Enter a UserName">
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <div class="form-group row d-flex justify-content-center">
+    <div class="col-md-4">
+      <label for="validationCustom03">Password</label>
+  <input type="password"  class="form-control" id="password" required [(ngModel)]="model.password" name="password">
+      <div class="invalid-feedback">
+        Please provide a valid password.
+      </div>
+    </div>
+  </div>
+    
+    <div class="form-group row d-flex justify-content-center">
+    <div class="col-md-4">
+      <label for="validationCustom04">Branch ID</label>
+       <input type="number" class="form-control" id="branch_id"
+         required
+         [(ngModel)]="model.branch_id" name="branch_id" #name='ngModel' placeholder="Enter a branch">
+      <div class="invalid-feedback">
+      </div>
+</div> 
+</div>
+
+<!-- <div class="form-group row d-flex justify-content-center">
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Confirm to update
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="col-xs-4 text-center">
+  <button class="btn btn-primary" type="submit" (click)="createAgent()">Submit form</button>
+</div>
+</form> 
+
+
