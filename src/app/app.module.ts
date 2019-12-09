@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule  } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './b_login/login.component';
@@ -18,6 +18,16 @@ import { AgentregistrationserviceService } from './b_agentregistration/agentregi
 import { LoginserviceService } from './b_login/loginservice.service';
 import { AdminupdatecomponentComponent } from './b_adminupdatecomponent/adminupdatecomponent.component';
 import { AdminupdateserviceService } from './b_adminupdatecomponent/adminupdateservice.service';
+//import { AuthGuard } from './auth.guard';
+import { RouterModule, Routes } from '@angular/router';
+
+
+const appRoutes: Routes = [
+  { path: 'login', component: LoginComponent },
+  //{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }
+];
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +46,7 @@ import { AdminupdateserviceService } from './b_adminupdatecomponent/adminupdates
     AppRoutingModule,
     FormsModule,
       HttpClientModule,
-
+     
        //ReactiveFormsModule,
     AgGridModule.withComponents([])
   ],

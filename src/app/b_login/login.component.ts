@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { LoginserviceService } from './loginservice.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+//import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,12 +17,7 @@ export class LoginComponent implements OnInit {
   constructor(private router:Router,private _httpService:LoginserviceService,private http: HttpClient) { }
 
   ngOnInit() {
-    this.loginForm = this.formBuilder.group({
-      userid: ['', Validators.required],
-      password: ['', Validators.required]
-    });
-    this.returnUrl = '/dashboard';
-    this.authService.logout();
+    
   }
 
 
