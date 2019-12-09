@@ -12,6 +12,8 @@ import { Admin } from './admin';
   styleUrls: ['./adminupdatecomponent.component.css']
 })
 export class AdminupdatecomponentComponent implements OnInit {
+
+  openform=false;
   empId:number;
 	name:string;
 	DOB:Date;
@@ -25,30 +27,17 @@ export class AdminupdatecomponentComponent implements OnInit {
 
     model:any= new Admin(0,'',new Date(),0,'','','');
 
+  
 
-  constructor(private router:Router, private _httpService:AdminupdateserviceService,private http: HttpClient) { }
+
+  constructor(private router:Router, private _httpService:AdminupdateserviceService,private http: HttpClient) 
+  {
+
+
+   }
 
    ngOnInit() {
   }
-
-  /*adminUpdatedetails(empId){
-  		//this.submitted=true;
-  		this.update();
-  }
-
-  update(){
-  	this.empId=this.model.empId;
-  	this.name=this.model.name;
-  	this.DOB=this.model.DOB;
-  	this.phone_num=this.model.phone_num;
-  	this.username=this.model.username;
-  	this.password=this.model.password;
-  	this.role=this.model.role;
-  	this.admin=new Admin(this.empId,this.name,this.DOB,this.phone_num,this.username,this.password,this.role);
-  	console.log(this.admin);
-  	this.adminupdateservice.adminUpdatedetails(this.empId)
-  	.subscribe(data=> console.log(data),error=>console.log(error));
-  }*/
 
   update(){
   	var empId=this.model.empId;
@@ -65,7 +54,8 @@ export class AdminupdatecomponentComponent implements OnInit {
     console.log(this.admin);
     this._httpService.adminUpdatedetails(empId,this.admin)
     .subscribe(data=> console.log(data),error=>console.log(error));
-
+    this.openform=true;
+    return this.openform;
     }
   	
 

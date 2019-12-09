@@ -13,9 +13,9 @@ export class LoginComponent implements OnInit {
 
 
    model: any = {};
+   flag:boolean;
 
   constructor(private router:Router,private _httpService:LoginserviceService,private http: HttpClient) { }
-
   ngOnInit() {
     
   }
@@ -37,10 +37,14 @@ export class LoginComponent implements OnInit {
         console.log("flag "+this.getData);
       });
     if(this.getData==true){
-      console.log("inside if");
-    //console.log(this.model.user);
-   // console.log(this.model.password);
+      this.flag=true;
+      console.log(this.flag);
      this.router.navigate(['/admindashboard']);
+
+
+   }
+   else {
+     this.flag=false;
    }
    //let user=this.model.username;
    //let password=this.model.password;

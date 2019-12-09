@@ -14,4 +14,5 @@ export class AdminupdateserviceService {
   	console.log(empId);
   	return this.http.put('http://localhost:8042/b_myproj/put/B_Admin/'+empId,admin);
   }
+ 
 }
