@@ -17,7 +17,7 @@ export class AgentComponent implements OnInit {
   private gridApi;
   private gridColumnApi;
   //private columnDefs;
-  private rowData;
+  public rowData;
   public tempId = 0;
   public btnVal = "Submit";
 

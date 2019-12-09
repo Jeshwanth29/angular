@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './b_login/login.component';
 import { AdmindashboardComponent } from './b_admindashboard/admindashboard.component';
-import { LogoutComponent } from './b_logout/logout.component';
 import {CustomerComponent} from './b_customer/customer.component';
 import { AgentComponent } from './b_agent/agent.component';
 import { AgentregistrationComponent } from './b_agentregistration/agentregistration.component';
@@ -24,7 +23,6 @@ import { AdminupdateserviceService } from './b_adminupdatecomponent/adminupdates
     AppComponent,
     LoginComponent,
     AdmindashboardComponent,
-    LogoutComponent,
     CustomerComponent,
     AgentComponent,
     AgentregistrationComponent,

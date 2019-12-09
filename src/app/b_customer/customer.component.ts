@@ -15,10 +15,10 @@ export class CustomerComponent implements OnInit {
  title = 'grid-example-app';
   custArray: Array<customer> = new Array();
   getData:any[];
-  private gridApi;
-  private gridColumnApi;
+  public gridApi;
+  public gridColumnApi;
   //private columnDefs;
-  private rowData;
+  public rowData;
   public tempId = 0;
   public account_no=0;
   public btnVal = "Submit";
