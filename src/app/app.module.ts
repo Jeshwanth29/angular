@@ -3,52 +3,42 @@ import { NgModule } from '@angular/core';
 import { FormsModule  } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './b_login/login.component';
-import { AdmindashboardComponent } from './b_admindashboard/admindashboard.component';
-import {CustomerComponent} from './b_customer/customer.component';
-import { AgentComponent } from './b_agent/agent.component';
-import { AgentregistrationComponent } from './b_agentregistration/agentregistration.component';
-import {AgGridModule} from "@ag-grid-community/angular";
 import { HttpClientModule } from '@angular/common/http';
-/*import { NewregistrationComponent } from './newregistration/newregistration.component';*/
-/*import { ReactiveFormsModule } from '@angular/forms';*/
-import { AgentserviceService } from './b_agent/agentservice.service';
-import { CustomerserviceService } from './b_customer/customerservice.service';
-import { AgentregistrationserviceService } from './b_agentregistration/agentregistrationservice.service';
-import { LoginserviceService } from './b_login/loginservice.service';
-import { AdminupdatecomponentComponent } from './b_adminupdatecomponent/adminupdatecomponent.component';
-import { AdminupdateserviceService } from './b_adminupdatecomponent/adminupdateservice.service';
-//import { AuthGuard } from './auth.guard';
-import { RouterModule, Routes } from '@angular/router';
-
-
-const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent },
-  //{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }
-];
+import {AgGridModule} from "@ag-grid-community/angular";
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
+import { CustomerComponent } from './customer/customer.component';
+import { ManagerComponent } from './manager/manager.component';
+import { MRegistrationComponent } from './m-registration/m-registration.component';
+import { MdupdateComponent } from './mdupdate/mdupdate.component';
+import { FaqComponent } from './faq/faq.component';
+import { TermsComponent } from './terms/terms.component';
+//import { MdupdateComponent } from './mdupdate/mdupdate.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    MainpageComponent,
+    DashboardComponent,
     LoginComponent,
-    AdmindashboardComponent,
     CustomerComponent,
-    AgentComponent,
-    AgentregistrationComponent,
-    AdminupdatecomponentComponent,
+    ManagerComponent,
+    MRegistrationComponent,
+    MdupdateComponent,
+    FaqComponent,
+    TermsComponent,
+    //MdupdateComponent
     
-
-   // NewregistrationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-      HttpClientModule,
-     
-       //ReactiveFormsModule,
+    HttpClientModule,
     AgGridModule.withComponents([])
+
   ],
   providers: [],
   bootstrap: [AppComponent]

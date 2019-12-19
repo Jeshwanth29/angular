@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { LoginserviceService } from './loginservice.service';
+import { LoginService } from './login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
    model: any = {};
 
-  constructor(private router:Router,private _httpService:LoginserviceService,private http: HttpClient) { }
+  constructor(private router:Router,private _httpService:LoginService,private http: HttpClient) { }
 
   ngOnInit() {
   }
@@ -34,21 +34,26 @@ export class LoginComponent implements OnInit {
         this.getData=res;
         console.log("flag "+this.getData);
       });
-    if(this.getData==true){
+          if(this.getData==true){
+            console.log("this.getData");
+
+    //if(user=='md' && password=='md'){
       console.log("inside if");
     //console.log(this.model.user);
    // console.log(this.model.password);
-     this.router.navigate(['/admindashboard']);
+     this.router.navigate(['/dashboard']);
 
 
    }
    //let user=this.model.username;
    //let password=this.model.password;
    // Service Call ang Auth Data form  // U take form  Service
-   
-
-}
 
 
 }
+   Logout()
+{
+  this.router.navigate(['/mainpage']);
+}
 
+}

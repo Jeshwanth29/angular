@@ -1,33 +1,35 @@
-export class customer{
-
-    public account_no:number;
-	public name:string;
-	public DOB:string;
-	public phone_no:number;
-	public username:string;
-	public password:string;
+export class Customer{
+	public cust_id:number;
+	public name:String;
+	public dob:Date;
+	public contact:number;
+	public address:String;
+	public username:String;
+	public password:String;
+	public aadhar_card:number;
+	public pan_card:String;
+	public branch_id:String;
+	public customer_Acc_no:String;
+	public open_date:Date;
 	public balance:number;
-	public branch_id:number;
-	public loan_id:string;
-	public type_id:string;
-	public aadhar_no:number;
-	public pan_no:string;
+	public account_id:String;
 
-constructor(account_no:number, name:string, DOB:string, phone_no:number, username:string, password:string,balance:number, branch_id:number, loan_id:string, type_id:string,aadhar_no:number,pan_no:string)
+	constructor( cust_id:number, name:String, dob:Date, contact:number, address:String,username:String,password:String, aadhar_card:number, pan_card:String, branch_id:String, customer_Acc_no:String,open_date:Date, balance:number, account_id:String)
 {
-	this.account_no=account_no;
+	this.cust_id=cust_id;
 	this.name=name;
-	this.DOB=DOB;
-	this.phone_no=phone_no;
+	this.dob=dob;
+	this.contact=contact;
+	this.address=address;
 	this.username=username;
 	this.password=password;
-	this.balance=balance;
+	this.aadhar_card=aadhar_card;
+	this.pan_card=pan_card;
 	this.branch_id=branch_id;
-	this.loan_id=loan_id;
-	this.type_id=type_id;
-	this.aadhar_no=aadhar_no
-	this.pan_no=pan_no
-	
+	this.customer_Acc_no=customer_Acc_no;
+	this.open_date=open_date;
+	this.balance=balance;
+	this.account_id=account_id;
+}
 }
 
-}

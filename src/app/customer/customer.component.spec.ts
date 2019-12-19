@@ -23,4 +23,3 @@ describe('CustomerComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
