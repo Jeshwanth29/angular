@@ -10,7 +10,7 @@ import { MRegistrationComponent } from './m-registration/m-registration.componen
 import { MdupdateComponent } from './mdupdate/mdupdate.component';
 import { FaqComponent} from './faq/faq.component';
 import {TermsComponent} from './terms/terms.component';
-
+//import { ProfileComponent } from './profile/profile.component';
 
 //import{ AgentComponent } from './agent/agent.component';
 //import{AgentregistrationComponent} from './agentregistration/agentregistration.component';
@@ -28,7 +28,7 @@ const routes: Routes = [
  {path:'mdupdate',component:MdupdateComponent},
  {path:'faq',component:FaqComponent},
  {path:'terms',component:TermsComponent},
-  // {path:'adminupdatecomponent', component:AdminupdatecomponentComponent}
+ //{path:'profile', component:ProfileComponent}
 ];
 
 @NgModule({

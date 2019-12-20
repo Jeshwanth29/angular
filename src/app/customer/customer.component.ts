@@ -22,6 +22,14 @@ export class CustomerComponent implements OnInit {
   public tempId = 0;
   public account_no=0;
   public btnVal = "Submit";
+  style = {
+        width: '100%',
+        height: '100%',
+        boxSizing: 'border-box',
+        marginTop: '20px'
+    };
+          modules = AllCommunityModules; 
+
  
       model= new Customer(0,'',new Date(),0,'','','',0,'','','',new Date(),0,'');  
       
@@ -44,5 +52,29 @@ export class CustomerComponent implements OnInit {
   ngOnInit() {
             this.rowData = this.http.get('http://localhost:8082/B_Customer');
   }
-      modules = AllCommunityModules; 
+
+  onFirstDataRendered(params) {
+        params.api.sizeColumnsToFit();
+    }
+
+    /*fillLarge() {
+        this.setWidthAndHeight('100%', '100%');
+    }*/
+
+    fillMedium() {
+        this.setWidthAndHeight('60%', '60%');
+    }
+
+    fillExact() {
+        this.setWidthAndHeight('400px', '400px');
+    }
+
+    setWidthAndHeight(width, height) {
+        this.style = {
+            marginTop: '20px',
+            width: width,
+            boxSizing: 'border-box',
+            height: height
+        };
+      }
 }

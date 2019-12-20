@@ -15,8 +15,8 @@ import { MdupdateComponent } from './mdupdate/mdupdate.component';
 import { FaqComponent } from './faq/faq.component';
 import { TermsComponent } from './terms/terms.component';
 //import { MdupdateComponent } from './mdupdate/mdupdate.component';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthGuard } from './auth.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +29,8 @@ import { TermsComponent } from './terms/terms.component';
     MdupdateComponent,
     FaqComponent,
     TermsComponent,
+    //ProfileComponent,
+
     //MdupdateComponent
     
   ],
@@ -37,10 +39,11 @@ import { TermsComponent } from './terms/terms.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     AgGridModule.withComponents([])
 
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 @import "~@ag-grid-community/all-modules/dist/styles/ag-grid.css";
 @import "~@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css";
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
 html,
       body,
       header,
@@ -34,44 +35,17 @@ html,
   .navbar:not(.top-nav-collapse) {
    background: #3b295a !important;
   }
-.view,body,html{height:100%}@media 
-(max-width:740px){
-  .full-page-intro{height:1000px}
-  }
+.view,body,html{height:100%}@media (max-width:740px){.full-page-intro{height:1000px}}.carousel{height:50%}.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item{height:100%}@media (max-width:776px){.carousel{height:100%}}.navbar{background-color:rgba(0,0,0,.3)}.page-footer,.top-nav-collapse{background-color:#1C2331}@media only screen and (max-width:768px){.navbar{background-color:#1C2331}}
 
-  .carousel{height:50%}
-  .carousel .carousel-inner,
-  .carousel .carousel-inner .active,
-  .carousel .carousel-inner .carousel-item{height:100%}
-  @media (max-width:776px){
-    .carousel{height:100%}}
-    .navbar{background-color:rgba(0,0,0,.3)}
-    .page-footer,
-    .top-nav-collapse{background-color:#1C2331}
-
-    @media only screen and (max-width:768px){
-      .navbar{background-color:#1C2331}
-    }
-
-/*.ag-row-hover {
-   
+.ag-row-hover {
+    /* putting in !important so it overrides the theme's styling as it hovers the row also */
     background-color: #dfdfff !important;
 }
 
-
 .ag-column-hover {
     background-color: #dfffdf;
-}*/
-
-
-.abc{
-
-	 background-color: #E6E6E6;
 }
-.ag-floating-top .ag-row {
-    background-color: #00e5ff;
-}
-
-.ag-floating-bottom .ag-row {
-    background-color: #00e5ff;
+.abc
+{
+	background-color: #E6E6E6
 }
